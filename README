@@ -1,0 +1,22 @@
+
+
+This submission includes:
+
+bounce.h 	--includes settings of the game
+pong.c   	--actual game
+paddle.c 	--used to create the paddle
+paddle.h 	--header file for paddle.c
+set_ticker.c	--used for the velocity of ball
+set_ticker.h    --header for set_ticker.c
+Plan     	--description of the design and operation of code
+typescript 	--sample run
+README     	--this readme file
+
+
+Notes:
+
+The makefile provides the following commands:
+
+make                -- compile and link code
+make run            -- run pong
+make clean          -- delete generated files
