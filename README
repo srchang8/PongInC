@@ -1,6 +1,34 @@
 
 
-This submission includes:
+PURPOSE
+	The purpose of pong is to let the user play the game 'pong' on a UNIX terminal. 
+	The user moves the paddle by pressing keys.
+
+IMPLEMENTATION
+	The implemtation is based on the curses library and signal handlers.
+
+The main thread
+	● sets up the screen and terminal settings,
+	● activates the signal handler, and then
+	● waits for user input in an endless loop.
+When the user presses the 'k' or 'm' keys, the main thread
+	● changes the paddle position and
+	● redraws the paddle.
+When the user presses the 'q' key (or when all balls are lost and the user presses any key), the main thread
+	● deactivates the signal handler and
+	● resets the terminal settings.
+The signal handler is excuted several times a second in a separate thread and
+	● moves and redraws the ball,
+	● reverts the direction of the ball if it bounces off a wall or the paddle, and
+	● reduces the number of balls left if the ball leaves the court.
+When all balls are lost, the signal handler
+	● displays a 'game over' message and
+	● deactivates the signal handler.
+	
+Details
+The SIGINT handler (Ctrl-C) is disabled because the program 
+should reset the terminal settings before it exits.
+
 
 bounce.h 	--includes settings of the game
 pong.c   	--actual game
@@ -10,7 +38,6 @@ set_ticker.c	--used for the velocity of ball
 set_ticker.h    --header for set_ticker.c
 Plan     	--description of the design and operation of code
 typescript 	--sample run
-README     	--this readme file
 
 
 Notes:
