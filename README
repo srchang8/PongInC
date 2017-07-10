@@ -5,7 +5,7 @@ PURPOSE
 	The user moves the paddle by pressing keys.
 
 IMPLEMENTATION
-	The implemtation is based on the curses library and signal handlers.
+	The implementation is based on the curses library and signal handlers.
 
 The main thread
 	● sets up the screen and terminal settings,
