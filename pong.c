@@ -52,7 +52,7 @@ int main()
 
 /*
 	Gets the game ready by setting up a few things
-	 -setting up bal settings
+	 -setting up ball settings
 	 -drawing the pong walls
 	 -initializing paddle
 	 -setting up alarm for ball move
