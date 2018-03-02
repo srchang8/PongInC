@@ -18,12 +18,12 @@ When the user presses the 'q' key (or when all balls are lost and the user press
 	● deactivates the signal handler and
 	● resets the terminal settings.
 The signal handler is excuted several times a second in a separate thread and
-	● moves and redraws the ball,
-	● reverts the direction of the ball if it bounces off a wall or the paddle, and
-	● reduces the number of balls left if the ball leaves the court.
+	● moves and redraws the ball
+	● reverts the direction of the ball if it bounces off a wall or the paddle
+	● reduces the number of balls left if the ball leaves the court
 When all balls are lost, the signal handler
 	● displays a 'game over' message and
-	● deactivates the signal handler.
+	● deactivates the signal handler
 	
 Details
 The SIGINT handler (Ctrl-C) is disabled because the program 
